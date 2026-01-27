@@ -1,7 +1,7 @@
+import "./style.css";
 import home from "./home.js";
 
 const pageContainer = document.querySelector("main");
+const pages = [home()];
 
-const h = home()
-
-pageContainer?.appendChild(h);
+pageContainer?.appendChild(pages[0]);

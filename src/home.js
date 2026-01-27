@@ -6,11 +6,11 @@ export default function home() {
     container.id = "home";
 
     const title = document.createElement("h2");
-    title.className = "title";
+    title.className = "title head-text";
     title.innerHTML = `${pageTitle}`;
 
     const about = document.createElement("p");
-    about.className = "about";
+    about.className = "about body-text";
     about.innerHTML = `${aboutText} <span>Yes!</span>`;
 
     container.append(title, about);
