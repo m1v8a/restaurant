@@ -28,6 +28,10 @@ export default {
                 test: /\.(png|svg|jpg|jpeg|webp|gif)$/i,
                 type: "asset/resource",
             },
+            {
+                test: /\.(ttf|woff|woff2)$/i,
+                type: "asset/resource",
+            },
         ],
     },
 }
