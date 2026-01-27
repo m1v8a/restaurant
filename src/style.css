@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --bg-prime: #311603;
+    --bg-prime-2: #5e3417;
+    --bg-second: #784E3A;
+    --bg-button: #BA713D;
+
+    --fg-light: #d5c4a1;
+    --font-regular: Montserrat, sytem-ui, sans-serif;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("./asset/fonts/Monsterrat/Montserrat-VariableFont_wght.ttf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Pacifico;
+    src: url("./asset/fonts/Pacifico-regular/Pacifico-regular.ttf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+html {
+    color: var(--fg-light);
+    background: linear-gradient(45deg, var(--bg-prime), var(--bg-prime-2));
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.head-text {
+    font-family: Pacifico;
+    font-weight: 400;
+}
+
+.body-text {
+    font-family: var(--font-regular);
+    font-weight: 400;
+}
+
+
+button {
+    background-color: var(--bg-button);
+    color: var(--fg-light);
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem;
+
+    .head-text {
+        font-weight: bold;
+    }
+}
+
+#home {
+    background-color: var(--bg-second);
+    width: 70%;
+    min-height: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+#home {
+    display :flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+
+    .head-text {
+        font-size: 3rem;
+    }
+
+    .body-text {
+
+    }
+}
