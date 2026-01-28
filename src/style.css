@@ -168,3 +168,9 @@ header {
         }
     }
 }
+
+footer {
+    padding: var(--container-padding);
+    background-color: var(--bg-prime);
+    text-align: center;
+}
