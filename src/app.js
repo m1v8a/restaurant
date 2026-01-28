@@ -10,7 +10,7 @@ const pages = {
     contact: contact(), 
 };
 
-switchPage("home", pages, pageContainer);
+switchPage("brewery", pages, pageContainer);
 
 document.querySelector(".nav-buttons").addEventListener("click", (e) => {
     if(e.target.nodeName !== "BUTTON") return;

@@ -1,4 +1,4 @@
-import bgImage from "../asset/images/jayden-sim-pQmlo0juG50-unsplash.jpg";
+import bgImage from "../asset/images/home_background.jpg";
 
 const pageTitle = "Absolute Caffeine";
 const aboutText = `Do you love coffee? <span>of course you do</span>.`;
