@@ -1,13 +1,12 @@
 import heroSection from "./hero.js";
-const pageTitle = "Absolute Caffeine";
-const aboutText = `Do you love coffee? <span>of course you do</span>.`;
+import schedule from "./schedule.js";
 
 export default function home() {
     const container = document.createElement("section");
     container.id = "home";
 
 
-    container.append(heroSection());
+    container.append(heroSection(), schedule());
 
     return container;
 }
