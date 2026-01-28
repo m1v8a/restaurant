@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -8,12 +8,22 @@
     --bg-prime: #311603;
     --bg-prime-2: #5e3417;
     --bg-second: #784E3A;
-    --bg-second-transparent: rgb(120, 78, 58, 0.3);
+    --bg-second-transparent: rgb(120, 78, 58, 0.35);
     --bg-button: #BA713D;
 
     --fg-light: #d5c4a1;
     --font-regular: Montserrat, sytem-ui, sans-serif;
     --font-heading: Pacifico, arial;
+
+    --container-padding: 2rem 4rem;
+}
+
+p {
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
 }
 
 img {
@@ -42,6 +52,7 @@ html {
     background: linear-gradient(45deg, var(--bg-prime), var(--bg-prime-2));
     background-repeat: no-repeat;
     min-height: 100vh;
+    font-family: var(--font-regular);
 }
 
 .head-text {
@@ -56,7 +67,6 @@ html {
 
 .hl-text {
     background-color: var(--bg-second);
-    display: inline-block;
     width: calc(1.5ch + 4px);
 }
 
@@ -76,7 +86,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    padding: 1rem;
+    padding: var(--container-padding);
 
     .head-text {
         font-weight: bold;
@@ -90,19 +100,11 @@ header {
         gap: 1rem;
         min-height: 700px;
         margin: 0 auto;
-        padding: 1rem 2rem; 
+        padding: var(--container-padding);
         position: relative;
         background-color: var(--bg-second);
     }
 
-    .hero::after {
-        content: "";
-        position: absolute;
-        width: 5rem;
-        height: calc(100% - 2.2rem);
-        background-color: var(--bg-prime-2);
-        left: 20rem;
-    }
 
     .hero>div:first-child {
         position: absolute;
@@ -114,6 +116,7 @@ header {
         z-index: 1;
 
         .head-text {
+            width: 16ch;
             font-size: 4rem;
         }
 
@@ -130,12 +133,38 @@ header {
 
     .schedules {
         margin-top: 2rem;
-        padding: 1rem 2rem;
+        padding: var(--container-padding);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; 
 
         .head-text {
             font-size: 3rem;
             text-align: center;
         }
 
+        .time-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+            li {
+                display: flex;
+                gap: 1rem;
+                font-size: 1.5rem;
+                border: 2px solid var(--bg-second);
+
+                > :first-child {
+                    background-color: var(--bg-second);
+                }
+
+                > * {
+                    padding: 0.5em;
+                    width: 16ch;
+                    text-align: center;
+                }
+            }
+        }
     }
 }
