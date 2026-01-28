@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -99,6 +101,11 @@ header {
     .head-text {
         font-weight: bold;
     }
+
+    .nav-buttons {
+        display: flex;
+        gap: 1rem;
+    }
 }
 
 #home {
@@ -144,7 +151,7 @@ header {
         padding: var(--container-padding);
         display: flex;
         flex-direction: column;
-        gap: 1rem; 
+        gap: 1rem;
 
         .head-text {
             font-size: 3rem;
@@ -167,7 +174,7 @@ header {
                     background-color: var(--bg-second);
                 }
 
-                > * {
+                >* {
                     padding: 0.5em;
                     width: 16ch;
                     text-align: center;
@@ -186,6 +193,7 @@ header {
     .head-text {
         text-align: center;
     }
+
     /* product list */
     ul {
         display: grid;
@@ -193,9 +201,32 @@ header {
         gap: 1rem;
 
         li article {
+            position: relative;
+            padding: 1rem;
+        }
+
+        li article,
+        div:last-child {
             display: flex;
             flex-direction: column;
             gap: 1rem;
+
+            .name {
+                background-color: var(--bg-second);
+                align-self: start;
+                padding: 0 1em;
+            }
+
+            .price {
+                align-self: end;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: var(--bg-prime-2);
+                width: 8ch;
+                text-align: center;
+            }
+
         }
     }
 
