@@ -8,10 +8,16 @@
     --bg-prime: #311603;
     --bg-prime-2: #5e3417;
     --bg-second: #784E3A;
+    --bg-second-transparent: rgb(120, 78, 58, 0.3);
     --bg-button: #BA713D;
 
     --fg-light: #d5c4a1;
     --font-regular: Montserrat, sytem-ui, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 @font-face {
@@ -72,24 +78,49 @@ header {
 
 #home {
     background-color: var(--bg-second);
-    width: 70%;
-    min-height: 700px;
-    margin: 0 auto;
-    padding: 1rem;
-}
+    padding: 3rem 0; 
 
-#home {
-    display :flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-
-
-    .head-text {
-        font-size: 3rem;
+    .hero {
+        display: flex;
+        justify-content: end;
+        gap: 1rem;
+        width: 70%;
+        min-height: 700px;
+        margin: 0 auto;
+        padding: 1rem;
+        border-radius: 12px;
+        position: relative;
     }
 
-    .body-text {
+    .hero::after {
+        content: "";
+        position: absolute;
+        width: 5rem;
+        height: calc(100% - 2.2rem);
+        background-color: var(--bg-prime-2);
+        left: 15rem;
+    }
 
+    .hero>div:first-child {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        background-color: var(--bg-second-transparent);
+        padding: 1rem 3rem;
+        z-index: 1;
+
+        .head-text {
+            font-size: 4rem;
+        }
+
+        .body-text {
+            font-size: 1.5rem;
+        }
+
+    }
+
+    .hero>div:last-child {
+        width: 75%;
     }
 }
