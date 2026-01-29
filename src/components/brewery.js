@@ -8,43 +8,43 @@ import irishCoffeeImg from "../asset/images/irish_coffee.jpg";
 
 const products = [
     {
-        name: "Cappuccino", 
-        price: 5.75, 
+        name: "Cappuccino",
+        price: 5.75,
         description: "Espresso with equal parts steamed milk and foam.",
         imgSrc: cappuccinoImg,
     },
-    { 
-        name: "Americano", 
-        price: 4.75, 
+    {
+        name: "Americano",
+        price: 4.75,
         description: "Espresso diluted with hot water.",
         imgSrc: americanoImg,
     },
-    { 
+    {
         name: "Espresso",
         price: 3.25,
         description: "Concentrated coffee base for many drinks",
         imgSrc: espressoImg,
     },
-    { 
+    {
         name: "Latte",
         price: 4.65,
         description: "Espresso with lots of steamed milk and a little foam.",
         imgSrc: latteImg,
 
     },
-    { 
+    {
         name: "Macchiato",
         price: 3.45,
         description: "Espresso with a small dollop of foam.",
         imgSrc: macchiatoImg,
     },
-    { 
+    {
         name: "Cold Brew",
         price: 4.45,
         description: "Coffee steeped in cold water for hours.",
         imgSrc: coldBrewImg,
     },
-    { 
+    {
         name: "Irish Coffee",
         price: 7,
         description: "Coffee with whiskey, sugar, and cream.",
@@ -56,7 +56,7 @@ export default function brewery() {
     const container = document.createElement("section");
     container.id = "brewery";
 
-    const heading = document.createElement("h1");
+    const heading = document.createElement("h2");
     heading.textContent = "Brewery";
     heading.className = "head-text";
 
@@ -94,11 +94,11 @@ function productCard(product) {
     description.textContent = product.description;
 
     const divTop = document.createElement("div");
-    const divBottom = document.createElement("div"); 
-    const divInfo = document.createElement("div"); 
+    const divBottom = document.createElement("div");
+    const divInfo = document.createElement("div");
 
     divTop.append(img);
-    divBottom.append(name,divInfo);
+    divBottom.append(name, divInfo);
     divInfo.append(description, price);
 
     container.append(divTop, divBottom);

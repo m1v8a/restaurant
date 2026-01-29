@@ -219,6 +219,7 @@ header {
 
             div:first-child {
                 padding: 1rem;
+
                 .img {
                     max-width: 100%;
                     height: auto;
@@ -235,7 +236,7 @@ header {
             }
 
             .description {
-                padding: 1rem; 
+                padding: 1rem;
             }
 
             .price {
@@ -252,7 +253,55 @@ header {
 
         }
     }
+}
 
+#contact {
+    margin-bottom: 5rem;
+    .head-text {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .outer-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .inner-div {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+
+        input, textarea {
+            display: block;
+            padding: 0.5em 1em;
+            background-color: var(--bg-second-transparent);
+            border: none;
+            margin-block: 8px;
+            color: var(--fg-light);
+        }
+
+        input:focus, textarea:focus {
+            background-color: var(--bg-second);
+        }
+
+        input {
+            width: 75ch;
+        }
+
+        textarea {
+            resize: none;
+            width: 70ch;
+            height: 400px;
+        }
+    }
 
 }
 

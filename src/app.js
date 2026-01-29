@@ -7,13 +7,13 @@ const pageContainer = document.querySelector("main");
 const pages = {
     home: home(),
     brewery: brewery(),
-    contact: contact(), 
+    contact: contact(),
 };
 
-switchPage("home", pages, pageContainer);
+switchPage("contact", pages, pageContainer);
 
 document.querySelector(".nav-buttons").addEventListener("click", (e) => {
-    if(e.target.nodeName !== "BUTTON") return;
+    if (e.target.nodeName !== "BUTTON") return;
     console.log(pages);
     switchPage(e.target.dataset.id, pages, pageContainer);
 });

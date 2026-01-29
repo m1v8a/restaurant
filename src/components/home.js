@@ -5,7 +5,6 @@ export default function home() {
     const container = document.createElement("section");
     container.id = "home";
 
-
     container.append(heroSection(), schedule());
 
     return container;
