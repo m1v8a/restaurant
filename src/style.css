@@ -105,6 +105,17 @@ header {
     .nav-buttons {
         display: flex;
         gap: 1rem;
+
+        button {
+            width: 30ch;
+            padding-block: 1rem;
+            transition: all 200ms ease-in;
+        }
+
+        button:hover {
+            background-color: var(--bg-second-transparent);
+            border-radius: 12px;
+        }
     }
 }
 
